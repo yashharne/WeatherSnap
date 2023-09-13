@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherSnap</title>
+    <meta name="title" content="WeatherSnap" />
+    <meta
+      name="description"
+      content="WeatherSnap is a real-time weather app which uses openweathermap API."
+    />
+    <link
+      rel="icon"
+      href="./images/weather_icons/50n.png"
+      type="image/x-icon"
+    />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/app.js" type="module"></script>
+    <script src="./js/route.js" type="module"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="./images/logo.png" alt="logo" width="364" height="58" />
+        </a>
+
+        <div class="search-view" data-search-view>
+          <div class="search-wrapper">
+            <input
+              type="search"
+              name="search"
+              placeholder="Search a City"
+              autocomplete="off"
+              class="search-field"
+              data-search-field
+            />
+            <span class="m-icon leading-icon"> search </span>
+            <button
+              class="icon-btn leading-icon has-state"
+              aria-label="close search"
+              data-search-toggler
+            >
+              <span class="m-icon">arrow_back</span>
+            </button>
+          </div>
+          <div class="search-result" data-search-result></div>
+        </div>
+
+        <div class="header-actions">
+          <button
+            class="icon-btn has-state"
+            aria-label="open search"
+            data-search-toggler
+          >
+            <span class="m-icon icon">search</span>
+          </button>
+
+          <a
+            href="#/current-location"
+            class="btn-primary has-state"
+            data-current-location-btn
+          >
+            <span class="m-icon">my_location</span>
+            <span class="span">Current Location</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <article class="container" data-container>
+        <div class="content-left">
+          <section
+            class="section current-weather"
+            aria-label="current-weather"
+            data-current-weather
+          ></section>
+
+          <section
+            class="section forecast"
+            aria-labelledby="forecast-label"
+            data-5-day-forecast
+          ></section>
+        </div>
+
+        <div class="content-right">
+          <section
+            class="section highlights"
+            aria-labelledby="highlights-label"
+            data-highlights
+          ></section>
+
+          <section
+            class="hourly-forecast"
+            aria-label="hourly forecast"
+            data-hourly-forecast
+          ></section>
+
+          <footer class="footer">
+            <p class="body-3">
+              Copyright 2023 Yash Harne. All Rights Reserved.
+            </p>
+          </footer>
+        </div>
+
+        <div class="loading" data-loading></div>
+      </article>
+    </main>
+
+    <section class="error-content" about-data-content>
+      <h3 class="heading-2">Powered By</h3>
+      <a href="https://openweathermap.org/api" target="_blank" rel="noopener">
+        <img
+          src="./images/openweather.png"
+          width="250"
+          height="50"
+          loading="lazy"
+          alt="Open weather"
+        />
+      </a>
+      <a href="#/weather?lat=20.2342965&lon=79.0027504" class="btn-primary">
+        <span class="m-icon">arrow_back</span>
+        <span class="span">Go Back</span>
+      </a>
+    </section>
+  </body>
+</html>
