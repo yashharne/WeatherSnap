@@ -1,6 +1,4 @@
-# WeatherSnap - Real-Time Weather Forecasting App
-
-![WeatherSnap Logo](./images/logo.png)
+# WeatherSnap
 
 WeatherSnap is a real-time weather forecasting web application powered by the OpenWeatherMap API.
 It provides users with up-to-the-minute weather data and forecasts using a user-friendly interface.
